@@ -1,5 +1,8 @@
+<h2>Editing "<%= @post.title %>"</h2>
+
 <% if @post.errors.any? %>
   <div id="error_explanation">
+    <h3>There were some errors:</h3>
     <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -8,7 +11,6 @@
   </div>
 <% end %>
 
-<h2>Editing "<%= @post.title %>"</h2>
 <%= form_tag post_path(@post), method: "patch" do %>
   <div class="field<%= ' field_with_errors' if @post.errors[:title].any? %>">
     <%= label_tag "title", "Title" %>
