@@ -1,5 +1,5 @@
 RSpec.describe "authors/new", type: :feature do
-  before(:each) { visit new_authors_path }
+  before(:each) { visit new_author_path }
 
   describe "a blank form" do
     it "does not render an error list" do
