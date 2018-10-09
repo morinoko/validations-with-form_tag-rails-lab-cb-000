@@ -1,15 +1,17 @@
 <% if @post.errors.any? %>
   <div id="error_messages">
-    <% @post.errors.full_messages.each do |error| %>
-      
-    <% end %>
+    <ul>
+      <% @post.errors.full_messages.each do |error| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
 
 <% end %>
 
 <h2>Create an Author</h2>
 <%= form_tag authors_path, method: "post" do %>
-  <div class="field">
+  <div class="field<%= ' field_with_errors' if @author.name.errors.any? %>">
     <%= label_tag "name", "Name" %>
     <%= text_field_tag "name", @author.name %>
   </div>
