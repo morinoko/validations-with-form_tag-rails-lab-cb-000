@@ -1,6 +1,6 @@
 <% if @post.errors.any? %>
   <div id="error_messages">
-    <% @post.full_messages.each do |error| %>
+    <% @post.errors.full_messages.each do |error| %>
       
     <% end %>
   </div>
