@@ -1,7 +1,7 @@
 <% if @author.errors.any? %>
   <div id="error_explanation">
     <ul>
-      <% @author.errors.full_messages.each do |error| %>
+      <% @author.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
